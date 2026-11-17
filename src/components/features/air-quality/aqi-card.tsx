@@ -1,14 +1,7 @@
 'use client';
 
 import React from 'react';
-import {
-  ShieldAlert,
-  Info,
-  Clock,
-  Radio,
-  Flame,
-  AlertTriangle,
-} from 'lucide-react';
+import { ShieldAlert, Info, Clock, Radio, Flame, AlertTriangle } from 'lucide-react';
 import { AirQualityData, AQIStandard } from '@/types/air-quality';
 import { STANDARDS_INFO } from '@/lib/air-quality/standards';
 

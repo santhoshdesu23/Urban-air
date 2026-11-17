@@ -3,26 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-  Wind,
-  MapPin,
-  RefreshCw,
-  Menu,
-  X,
-  Sparkles,
-} from 'lucide-react';
+import { Wind, MapPin, RefreshCw, Menu, X, Sparkles } from 'lucide-react';
 import { useApp } from '@/lib/context/app-context';
 import { LocationModal } from '../features/location/location-modal';
 
 export function Header() {
   const pathname = usePathname();
-  const {
-    currentLocation,
-    isLoadingAqi,
-    refreshAqi,
-    activeStandard,
-    setActiveStandard,
-  } = useApp();
+  const { currentLocation, isLoadingAqi, refreshAqi, activeStandard, setActiveStandard } = useApp();
 
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

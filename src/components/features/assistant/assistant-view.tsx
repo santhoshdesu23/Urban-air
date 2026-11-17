@@ -3,13 +3,7 @@
 import React, { useState } from 'react';
 import { useApp } from '@/lib/context/app-context';
 import { AssistantMessage } from '@/types/assistant';
-import {
-  Sparkles,
-  Send,
-  Loader2,
-  CheckCircle2,
-  AlertTriangle,
-} from 'lucide-react';
+import { Sparkles, Send, Loader2, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 const STARTER_PROMPTS = [
   'Is it safe to go running today?',
@@ -83,12 +77,16 @@ export function AssistantView() {
         createdAt: new Date().toISOString(),
         structuredResponse: data.structuredResponse,
         isDeterministicFallback: data.isDeterministicFallback,
+        providerNotice: data.providerNotice,
       };
 
       setMessages((prev) => [...prev, assistantMsg]);
     } catch (err: unknown) {
       console.error('Assistant error:', err);
-      const msg = err instanceof Error ? err.message : 'Unable to generate advice right now. Please try again.';
+      const msg =
+        err instanceof Error
+          ? err.message
+          : 'Unable to generate advice right now. Please try again.';
       setErrorText(msg);
     } finally {
       setIsLoading(false);
@@ -168,12 +166,13 @@ export function AssistantView() {
               ) : (
                 <div className="w-full max-w-3xl rounded-3xl rounded-tl-sm border border-slate-200/80 bg-white p-6 shadow-xs sm:p-7">
                   {/* Assistant Disclosure Notice */}
-                  {msg.isDeterministicFallback !== undefined && (
+                  {(msg.isDeterministicFallback !== undefined || msg.providerNotice) && (
                     <div className="mb-4 rounded-xl border border-slate-200/60 bg-slate-50 px-3 py-1.5 text-[11px] text-slate-500 flex items-center justify-between">
                       <span>
-                        {msg.isDeterministicFallback
-                          ? '🌱 Grounded via BreatheWise Deterministic Environmental Intelligence Engine'
-                          : '⚡ Live Generative AI Response via Vercel AI SDK'}
+                        {msg.providerNotice ||
+                          (msg.isDeterministicFallback
+                            ? '🌱 Grounded via BreatheWise Deterministic Environmental Intelligence Engine'
+                            : '⚡ Live Generative AI Response via Vercel AI SDK')}
                       </span>
                       {structured?.confidence && (
                         <span className="font-semibold text-emerald-800">

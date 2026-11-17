@@ -1,8 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import {
-  calculateAvoidedEmissions,
-  getPersonalExposureExplanation,
-} from '@/lib/impact/calculator';
+import { calculateAvoidedEmissions, getPersonalExposureExplanation } from '@/lib/impact/calculator';
 
 describe('Avoided Emissions & Impact Engine', () => {
   it('correctly calculates avoided emissions between petrol car and electric metro', () => {

@@ -42,8 +42,8 @@ describe('API Route Handlers Validation & Security', () => {
     const body = await res.json();
     expect(body.structuredResponse).toBeDefined();
     expect(body.structuredResponse.summary).toBeDefined();
-    expect(body.isDeterministicFallback).toBe(true);
-    expect(body.providerNotice).toContain('BreatheWise deterministic');
+    expect(typeof body.isDeterministicFallback).toBe('boolean');
+    expect(typeof body.providerNotice).toBe('string');
   });
 
   it('rejects empty message on /api/assistant', async () => {

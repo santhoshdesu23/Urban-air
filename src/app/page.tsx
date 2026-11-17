@@ -9,14 +9,7 @@ import { HourlyChart } from '@/components/features/air-quality/hourly-chart';
 import { DailyOutlook } from '@/components/features/air-quality/daily-outlook';
 import { RoutineTimeline } from '@/components/features/planner/routine-timeline';
 import { ProfileModal } from '@/components/features/planner/profile-modal';
-import {
-  Sparkles,
-  ArrowRight,
-  Home,
-  TrendingDown,
-  Loader2,
-  AlertCircle,
-} from 'lucide-react';
+import { Sparkles, ArrowRight, Home, TrendingDown, Loader2, AlertCircle } from 'lucide-react';
 
 export default function DashboardPage() {
   const {

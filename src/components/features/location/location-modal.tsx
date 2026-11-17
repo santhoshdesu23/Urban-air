@@ -7,12 +7,8 @@ import { PRESET_LOCATIONS, PresetLocation } from '@/lib/air-quality/service';
 import { GeocodingResult } from '@/types/air-quality';
 
 export function LocationModal({ onClose }: { onClose: () => void }) {
-  const {
-    currentLocation,
-    selectLocation,
-    detectUserLocation,
-    locationPermissionStatus,
-  } = useApp();
+  const { currentLocation, selectLocation, detectUserLocation, locationPermissionStatus } =
+    useApp();
 
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState<GeocodingResult[]>([]);

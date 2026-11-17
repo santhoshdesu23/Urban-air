@@ -3,13 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { COMMUNITY_ACTION_GUIDES, COMMUNITY_CHALLENGES } from '@/lib/community/challenges';
 import { CommunityChallenge } from '@/types/community';
-import {
-  CheckCircle,
-  Circle,
-  Printer,
-  Share2,
-  Info,
-} from 'lucide-react';
+import { CheckCircle, Circle, Printer, Share2, Info } from 'lucide-react';
 
 const COMMUNITY_STORAGE_KEY = 'breathewise_community_challenges';
 

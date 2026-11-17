@@ -5,6 +5,7 @@ export interface AssistantMessage {
   createdAt: string;
   structuredResponse?: AssistantStructuredResponse;
   isDeterministicFallback?: boolean;
+  providerNotice?: string;
 }
 
 export interface AssistantStructuredResponse {

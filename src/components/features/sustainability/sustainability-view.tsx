@@ -3,14 +3,7 @@
 import React, { useState } from 'react';
 import { SUSTAINABLE_RECOMMENDATIONS } from '@/lib/sustainability/recommendations';
 import { SustainableCategory } from '@/types/sustainability';
-import {
-  Car,
-  Zap,
-  Users,
-  Info,
-  CheckCircle2,
-  TrendingDown,
-} from 'lucide-react';
+import { Car, Zap, Users, Info, CheckCircle2, TrendingDown } from 'lucide-react';
 
 export function SustainabilityView() {
   const [selectedFilter, setSelectedFilter] = useState<'all' | SustainableCategory>('all');

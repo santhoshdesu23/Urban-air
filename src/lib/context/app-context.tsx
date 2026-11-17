@@ -1,6 +1,13 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState, useTransition, useCallback } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useTransition,
+  useCallback,
+} from 'react';
 import { AirQualityData, AQIStandard } from '@/types/air-quality';
 import { DEFAULT_PLANNER_PROFILE, generateDailyPlan } from '@/lib/planner/generator';
 import { DailyPlan, UserPlannerProfile } from '@/types/planner';

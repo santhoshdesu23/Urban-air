@@ -1,19 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import {
-  calculateAvoidedEmissions,
-  getPersonalExposureExplanation,
-} from '@/lib/impact/calculator';
+import { calculateAvoidedEmissions, getPersonalExposureExplanation } from '@/lib/impact/calculator';
 import { TransportImpactCalculationInput } from '@/types/impact';
 import { useApp } from '@/lib/context/app-context';
-import {
-  Calculator,
-  ShieldCheck,
-  TrendingDown,
-  BarChart3,
-  Calendar,
-} from 'lucide-react';
+import { Calculator, ShieldCheck, TrendingDown, BarChart3, Calendar } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 export function ImpactView() {
@@ -164,7 +155,8 @@ export function ImpactView() {
                 onChange={(e) =>
                   setCalcInput({
                     ...calcInput,
-                    alternativeMode: e.target.value as TransportImpactCalculationInput['alternativeMode'],
+                    alternativeMode: e.target
+                      .value as TransportImpactCalculationInput['alternativeMode'],
                   })
                 }
                 className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900"

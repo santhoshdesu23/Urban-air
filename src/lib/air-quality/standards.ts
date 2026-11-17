@@ -1,8 +1,4 @@
-import {
-  AQICategoryUSEPA,
-  AQICategoryEuropean,
-  AQIStandard,
-} from '@/types/air-quality';
+import { AQICategoryUSEPA, AQICategoryEuropean, AQIStandard } from '@/types/air-quality';
 
 export function getUSEPACategory(aqi: number): AQICategoryUSEPA {
   if (aqi <= 50) return 'Good';
