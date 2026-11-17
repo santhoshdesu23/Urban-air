@@ -1,0 +1,16 @@
+{
+  "name": "BreatheWise - Urban Air Quality Assistant",
+  "short_name": "BreatheWise",
+  "description": "Know your air. Change your routine. Protect your surroundings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#047857",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
